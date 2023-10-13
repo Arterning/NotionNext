@@ -18,7 +18,8 @@
     "start": "next start",
     "post-build": "next-sitemap --config next-sitemap.config.js",
     "export": "next build && next-sitemap --config next-sitemap.config.js && next export",
-    "bundle-report": "ANALYZE=true yarn build"
+    "bundle-report": "ANALYZE=true yarn build",
+    "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts"
   },
   "dependencies": {
     "@giscus/react": "^2.2.6",
