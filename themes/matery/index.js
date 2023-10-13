@@ -31,6 +31,7 @@ import BlogListBar from './components/BlogListBar'
 import { Transition } from '@headlessui/react'
 import { Style } from './style'
 import replaceSearchResult from '@/components/Mark'
+import ProjectList from '@/components/ProjectList'
 
 /**
  * 基础布局
@@ -356,6 +357,20 @@ const LayoutTagIndex = props => {
   )
 }
 
+/**
+ * 项目展示
+ */
+const LayoutProject = (props) => {
+  const { projects } = props
+  return (
+    <LayoutBase {...props} className='pt-8'>
+      <Card className='w-full'>
+        <ProjectList projects ={projects}/>
+      </Card>
+    </LayoutBase>
+  )
+}
+
 export {
   CONFIG as THEME_CONFIG,
   LayoutIndex,
@@ -365,5 +380,6 @@ export {
   LayoutSlug,
   Layout404,
   LayoutCategoryIndex,
-  LayoutTagIndex
+  LayoutTagIndex,
+  LayoutProject
 }

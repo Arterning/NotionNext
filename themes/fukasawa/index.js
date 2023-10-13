@@ -21,6 +21,8 @@ import { AdSlot } from '@/components/GoogleAdsense'
 import { Style } from './style'
 import replaceSearchResult from '@/components/Mark'
 import CommonHead from '@/components/CommonHead'
+import Card from '@/themes/hexo/components/Card'
+import ProjectList from '@/components/ProjectList'
 
 const Live2D = dynamic(() => import('@/components/Live2D'))
 
@@ -249,6 +251,20 @@ const LayoutTagIndex = (props) => {
     </LayoutBase>
 }
 
+/**
+ * 项目展示
+ */
+const LayoutProject = (props) => {
+  const { projects } = props
+  return (
+    <LayoutBase {...props} className='pt-8'>
+      <Card className='w-full'>
+        <ProjectList projects ={projects}/>
+      </Card>
+    </LayoutBase>
+  )
+}
+
 export {
   CONFIG as THEME_CONFIG,
   LayoutIndex,
@@ -258,5 +274,6 @@ export {
   Layout404,
   LayoutPostList,
   LayoutCategoryIndex,
-  LayoutTagIndex
+  LayoutTagIndex,
+  LayoutProject
 }

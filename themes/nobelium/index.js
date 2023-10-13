@@ -25,6 +25,8 @@ import { Style } from './style'
 import replaceSearchResult from '@/components/Mark'
 import CommonHead from '@/components/CommonHead'
 import AlgoliaSearchModal from '@/components/AlgoliaSearchModal'
+import Card from '@/themes/hexo/components/Card'
+import ProjectList from '@/components/ProjectList'
 
 // 主题全局状态
 const ThemeGlobalNobelium = createContext()
@@ -289,6 +291,20 @@ const LayoutTagIndex = (props) => {
   )
 }
 
+/**
+ * 项目展示
+ */
+const LayoutProject = (props) => {
+  const { projects } = props
+  return (
+    <LayoutBase {...props} className='pt-8'>
+      <Card className='w-full'>
+        <ProjectList projects ={projects}/>
+      </Card>
+    </LayoutBase>
+  )
+}
+
 export {
   CONFIG as THEME_CONFIG,
   LayoutIndex,
@@ -298,5 +314,6 @@ export {
   Layout404,
   LayoutPostList,
   LayoutCategoryIndex,
-  LayoutTagIndex
+  LayoutTagIndex,
+  LayoutProject
 }

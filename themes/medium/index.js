@@ -36,6 +36,8 @@ import { Style } from './style'
 import replaceSearchResult from '@/components/Mark'
 import ArticleInfo from './components/ArticleInfo'
 import CommonHead from '@/components/CommonHead'
+import Card from '@/themes/hexo/components/Card'
+import ProjectList from '@/components/ProjectList'
 
 // 主题全局状态
 const ThemeGlobalMedium = createContext()
@@ -329,6 +331,20 @@ const LayoutTagIndex = props => {
   )
 }
 
+/**
+ * 项目展示
+ */
+const LayoutProject = (props) => {
+  const { projects } = props
+  return (
+    <LayoutBase {...props} className='pt-8'>
+      <Card className='w-full'>
+        <ProjectList projects ={projects}/>
+      </Card>
+    </LayoutBase>
+  )
+}
+
 export {
   CONFIG as THEME_CONFIG,
   LayoutIndex,
@@ -338,5 +354,6 @@ export {
   LayoutSlug,
   Layout404,
   LayoutCategoryIndex,
-  LayoutTagIndex
+  LayoutTagIndex,
+  LayoutProject
 }

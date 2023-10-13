@@ -34,6 +34,7 @@ import { Transition } from '@headlessui/react'
 import { Style } from './style'
 import replaceSearchResult from '@/components/Mark'
 import ProjectCard from '@/components/ProjectCard/Card'
+import ProjectList from '@/components/ProjectList'
 
 /**
  * 基础布局 采用左右两侧布局，移动端使用顶部导航栏
@@ -191,27 +192,7 @@ const LayoutProject = (props) => {
   return (
     <LayoutBase {...props} className='pt-8'>
       <Card className='w-full'>
-        <div className="dark:text-gray-300">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Projects
-          </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            Showcase projects with images
-          </p>
-          <div className="container py-12">
-            <div className="-m-4 flex flex-wrap">
-              {projects.map((d) => (
-                <ProjectCard
-                  key={d.title}
-                  title={d.title}
-                  description={d.description}
-                  imgSrc={d.imgSrc}
-                  href={d.href}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
+        <ProjectList projects ={projects}/>
       </Card>
     </LayoutBase>
   )

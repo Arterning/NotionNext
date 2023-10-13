@@ -33,6 +33,8 @@ import replaceSearchResult from '@/components/Mark'
 import LazyImage from '@/components/LazyImage'
 import WWAds from '@/components/WWAds'
 import { AdSlot } from '@/components/GoogleAdsense'
+import Card from '@/themes/hexo/components/Card'
+import ProjectList from '@/components/ProjectList'
 
 /**
  * 基础布局 采用上中下布局，移动端使用顶部侧边导航栏
@@ -558,6 +560,20 @@ const LayoutTagIndex = props => {
   )
 }
 
+/**
+ * 项目展示
+ */
+const LayoutProject = (props) => {
+  const { projects } = props
+  return (
+    <LayoutBase {...props} className='pt-8'>
+      <Card className='w-full'>
+        <ProjectList projects ={projects}/>
+      </Card>
+    </LayoutBase>
+  )
+}
+
 export {
   CONFIG as THEME_CONFIG,
   LayoutIndex,
@@ -567,5 +583,6 @@ export {
   Layout404,
   LayoutCategoryIndex,
   LayoutPostList,
-  LayoutTagIndex
+  LayoutTagIndex,
+  LayoutProject
 }

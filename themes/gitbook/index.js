@@ -35,6 +35,8 @@ import BlogArchiveItem from './components/BlogArchiveItem'
 import BlogPostListPage from './components/BlogPostListPage'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
+import Card from '@/themes/hexo/components/Card'
+import ProjectList from '@/components/ProjectList'
 const WWAds = dynamic(() => import('@/components/WWAds'), { ssr: false })
 
 // 主题全局变量
@@ -342,6 +344,20 @@ const LayoutTagIndex = (props) => {
   </LayoutBase>
 }
 
+/**
+ * 项目展示
+ */
+const LayoutProject = (props) => {
+  const { projects } = props
+  return (
+    <LayoutBase {...props} className='pt-8'>
+      <Card className='w-full'>
+        <ProjectList projects ={projects}/>
+      </Card>
+    </LayoutBase>
+  )
+}
+
 export {
   CONFIG as THEME_CONFIG,
   LayoutIndex,
@@ -351,5 +367,6 @@ export {
   Layout404,
   LayoutCategoryIndex,
   LayoutPostList,
-  LayoutTagIndex
+  LayoutTagIndex,
+  LayoutProject
 }
