@@ -32,6 +32,13 @@ module.exports = withBundleAnalyzer({
   images: {
     // 图片压缩
     formats: ['image/avif', 'image/webp'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com',
+        pathname: '/Arterning/images-cloud/master/**'
+      }
+    ],
     // 允许next/image加载的图片 域名
     domains: [
       'gravatar.com',
@@ -41,7 +48,8 @@ module.exports = withBundleAnalyzer({
       'source.unsplash.com',
       'p1.qhimg.com',
       'webmention.io',
-      'raw.githubusercontent.com'
+      'raw.githubusercontent.com',
+      'file.notion.so'
     ]
   },
   // 默认将feed重定向至 /public/rss/feed.xml

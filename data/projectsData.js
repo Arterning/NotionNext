@@ -1,31 +1,68 @@
 const projectsData = [
   {
+    title: 'Notion Next Blog',
+    description: 'Blog Website build by NextJS and Notion API.',
+    imgSrc: '/images/feature-3.webp',
+    href: 'https://arterning.site',
+    type: 'Blog'
+  },
+  {
+    title: 'Docusaurus Blog',
+    description: 'Blog Website built by docusaurus.',
+    imgSrc: '/images/docusaurus_keytar.svg',
+    href: 'https://arterning.github.io/blogs/',
+    type: 'Blog'
+  },
+  {
     title: 'Profile',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/images/feature-1.webp',
-    href: 'https://radiant-praline-23172e.netlify.app/'
+    description: 'Personal Profile',
+    imgSrc: '/images/profile.jpg',
+    href: 'https://radiant-praline-23172e.netlify.app/',
+    type: 'Profile'
   },
   {
     title: 'Enterprise Official Website',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
+    description: 'A purely static corporate official website.',
+    imgSrc: '/images/profile.jpg',
+    href: 'https://superlative-stardust-47214b.netlify.app/',
+    type: 'Business Case'
+  },
+  {
+    title: 'Backstop Solutions',
+    description: 'Streamline your intelligence.\n' +
+      'Power your future success\n' +
+      'Backstop’s innovative technology empowers you to unlock your data, driving effectiveness, fostering collaboration and enabling swift, confident investment decisions.',
+    imgSrc: '/images/backstop.png',
+    href: 'https://www.backstopsolutions.com/',
+    type: 'Business Case'
+  },
+  {
+    title: 'ZoomLion',
+    description: '中联重科',
+    imgSrc: '/images/zlion.jpg',
+    href: 'https://www.zoomlion.com/',
+    type: 'Business Case'
+  },
+  {
+    title: 'ZoomLion Smart Agriculture',
+    description: '中联智慧农业',
+    imgSrc: '/images/zlion.webp',
+    href: 'https://iland.zoomlion.com/i-farm-admin/login/',
+    type: 'Business Case'
+  },
+  {
+    title: 'Notion',
+    description: 'Notion is the connected workspace where better, faster work happens. · Millions run on Notion every day · Finally, all your work in one place · Consolidate tools.',
+    imgSrc: '/images/feature-1.webp',
+    href: 'https://www.notion.so/',
+    type: 'Framework'
+  },
+  {
+    title: 'NextJS',
+    description: 'Used by some of the world\'s largest companies, Next.js enables you to create full-stack Web applications by extending the latest React features, and integrating powerful Rust-based JavaScript tooling for the fastest builds',
     imgSrc: '/images/feature-2.webp',
-    href: 'https://superlative-stardust-47214b.netlify.app/'
-  },
-  {
-    title: 'Notion Next Blogs',
-    description: 'The weather app is a simple yet powerful tool to help you plan your day.',
-    imgSrc: '/images/feature-3.webp',
-    href: 'https://meek-faloodeh-87b493.netlify.app/'
-  },
-  {
-    title: 'Dinosaurs Blogs',
-    description: 'The weather app is a simple yet powerful tool to help you plan your day.',
-    imgSrc: '/images/hero-image.png',
-    href: 'https://arterning.github.io/blogs/'
+    href: 'https://nextjs.org/',
+    type: 'Framework'
   }
 ]
 

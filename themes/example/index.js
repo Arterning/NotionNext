@@ -258,9 +258,11 @@ const LayoutProject = (props) => {
   const { projects } = props
   return (
     <LayoutBase {...props} className='pt-8'>
-      <Card className='w-full'>
-        <ProjectList projects ={projects}/>
-      </Card>
+      <div id="projects-list">
+        <Card className='w-full'>
+          <ProjectList projects ={projects}/>
+        </Card>
+      </div>
     </LayoutBase>
   )
 }
