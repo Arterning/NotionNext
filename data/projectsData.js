@@ -23,7 +23,7 @@ const projectsData = [
   {
     title: 'Enterprise Official Website',
     description: 'A purely static corporate official website.',
-    imgSrc: '/images/profile.jpg',
+    imgSrc: '/images/pexels-photo-8348457.jpg',
     href: 'https://superlative-stardust-47214b.netlify.app/',
     type: 'Business Case'
   },
