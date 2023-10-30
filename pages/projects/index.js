@@ -1,8 +1,8 @@
 import { getLayoutByTheme } from '@/themes/theme'
 import { useRouter } from 'next/router'
 import BLOG from '@/blog.config'
-import projectsData from '@/data/projectsData'
 import { getGlobalData } from '@/lib/notion/getNotionData'
+import NotionService from '@/lib/notionServer'
 
 const Projects = props => {
   // 根据页面路径加载不同Layout文件
@@ -13,6 +13,11 @@ const Projects = props => {
 
 export async function getStaticProps() {
   const props = await getGlobalData({ from: 'project-index' })
+
+  const notionService = new NotionService()
+  const dbId = process.env.DB_ID
+  const projectsData = await notionService.queryDB(dbId);
+
   delete props.allPages
   props.projects = projectsData
   return {
