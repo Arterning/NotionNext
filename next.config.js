@@ -49,7 +49,8 @@ module.exports = withBundleAnalyzer({
       'p1.qhimg.com',
       'webmention.io',
       'raw.githubusercontent.com',
-      'file.notion.so'
+      'file.notion.so',
+      'prod-files-secure.s3.us-west-2.amazonaws.com'
     ]
   },
   // 默认将feed重定向至 /public/rss/feed.xml

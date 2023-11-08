@@ -16,7 +16,12 @@ export async function getStaticProps() {
 
   const notionService = new NotionService()
   const dbId = process.env.DB_ID
-  const projectsData = await notionService.queryDB(dbId);
+  let projectsData = await notionService.queryDB(dbId);
+
+  projectsData = projectsData.map(item => ({
+    ...item,
+    media: item['Files & media']?.files[0]?.file?.url || ''
+  }));
 
   delete props.allPages
   props.projects = projectsData

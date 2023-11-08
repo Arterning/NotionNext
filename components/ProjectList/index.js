@@ -41,7 +41,7 @@ const ProjectList = ({ projects }) => {
                     key={d.title}
                     title={d.title}
                     description={d.description}
-                    imgSrc={d.imgSrc}
+                    imgSrc={d.imgSrc ? d.imgSrc : d.media}
                     href={d.href}
                   />
                 ))}
