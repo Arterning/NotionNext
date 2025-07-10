@@ -23,10 +23,10 @@ const ProjectList = ({ projects }) => {
     <div className='dark:text-gray-300'>
       <h1
         className='text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14'>
-        Projects
+        My Projects
       </h1>
       <h2 className="text-2xl leading-7 text-gray-500 dark:text-gray-400 py-10">
-        Showcase projects with images
+        check out my latest work
       </h2>
       {
         categorizedDataArray && categorizedDataArray.map(([projectType, items]) => (
@@ -43,6 +43,7 @@ const ProjectList = ({ projects }) => {
                     description={d.description}
                     imgSrc={d.imgSrc ? d.imgSrc : d.media}
                     href={d.href}
+                    githubLink={d.githubLink}
                   />
                 ))}
               </div>
